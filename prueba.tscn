@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3hgu8hd7gil4"]
+
+[ext_resource type="PackedScene" uid="uid://ded47p4hvo8qh" path="res://nivel_1.tscn" id="1_xp3fm"]
+[ext_resource type="PackedScene" uid="uid://dfqlyjy5g6cmd" path="res://player.tscn" id="2_55cug"]
+[ext_resource type="PackedScene" uid="uid://bb3ddt3r0w3mb" path="res://blue.tscn" id="3_b4mw0"]
+[ext_resource type="PackedScene" uid="uid://1635g58ubyk3" path="res://point.tscn" id="4_qf0rp"]
+[ext_resource type="Script" path="res://points.gd" id="4_xxm4a"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(456, 362)
+
+[node name="nivel 1" parent="." instance=ExtResource("1_xp3fm")]
+position = Vector2(800, 400)
+
+[node name="Camera2D" type="Camera2D" parent="nivel 1"]
+
+[node name="Player" parent="nivel 1" instance=ExtResource("2_55cug")]
+position = Vector2(-295, 294)
+
+[node name="blue" parent="nivel 1" instance=ExtResource("3_b4mw0")]
+position = Vector2(-298, 386)
+
+[node name="points" type="Node" parent="nivel 1"]
+script = ExtResource("4_xxm4a")
+
+[node name="Point" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(1110, 1065)
+
+[node name="Point2" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(1160, 1065)
+
+[node name="Point3" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(1215, 1066)
+
+[node name="Point4" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(950, 1243)
+
+[node name="Point5" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(771, 1266)
+
+[node name="Point6" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(700, 1267)
+
+[node name="Point7" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(554, 1174)
+
+[node name="Point8" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(557, 1088)
+
+[node name="Point9" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(557, 1031)
+
+[node name="Point10" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(556, 978)
+
+[node name="Point11" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(654, 865)
+
+[node name="Point12" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(724, 867)
+
+[node name="Point13" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
+position = Vector2(786, 865)

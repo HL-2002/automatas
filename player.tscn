@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfqlyjy5g6cmd"]
+
+[ext_resource type="Texture2D" uid="uid://dmi2254qf6jka" path="res://Resources/Resources/player/player.png" id="1_5vp3j"]
+[ext_resource type="Script" path="res://player.gd" id="1_ovohx"]
+[ext_resource type="Texture2D" uid="uid://dan4rgpglitjv" path="res://Resources/Resources/player/player die(1).png" id="2_8ur6k"]
+[ext_resource type="Texture2D" uid="uid://r1cxqxnhpqdq" path="res://Resources/Resources/player/player die(2).png" id="3_ybqft"]
+[ext_resource type="Texture2D" uid="uid://dnct0u5efk875" path="res://Resources/Resources/player/player die(3).png" id="4_7hhlb"]
+[ext_resource type="Texture2D" uid="uid://ccmbpai6k01rm" path="res://Resources/Resources/player/player mov.png" id="5_al422"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rm3d5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5vp3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8ur6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ybqft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7hhlb")
+}],
+"loop": true,
+"name": &"die",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5vp3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_al422")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(13, 2)
+script = ExtResource("1_ovohx")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_rm3d5")
+animation = &"walk"
+frame = 1
+frame_progress = 0.504025
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-17, 50, 6, 50, 7, 47, 13, 46, 19, 26, 24, 23, 21, 8, 12, 3, 18, -4, 17, -35, 9, -44, -6, -43, -18, -37, -23, -29, -25, -3, -19, 2, -24, 8, -28, 17, -28, 30, -21, 29, -20, 46)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-17, 55, 8, 53, 7, 47, 13, 46, 19, 26, 30, 21, 24, 7, 23, 3, 22, -5, 17, -35, 31, -47, -3, -51, -18, -37, -23, -29, -25, -3, -19, 2, -24, 8, -34, 18, -28, 30, -21, 29, -20, 46)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

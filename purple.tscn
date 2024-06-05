@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt4yc8bvupfhv"]
+
+[ext_resource type="Texture2D" uid="uid://blnji1tiattju" path="res://Resources/Resources/enemigos/purple/move 1.png" id="1_57ca0"]
+[ext_resource type="Texture2D" uid="uid://xysbniqymnub" path="res://Resources/Resources/enemigos/purple/move2.png" id="2_pn2gy"]
+[ext_resource type="Texture2D" uid="uid://btm2j3ucimh2n" path="res://Resources/Resources/enemigos/weak/move 1.png" id="3_waspf"]
+[ext_resource type="Texture2D" uid="uid://glhdrft77msn" path="res://Resources/Resources/enemigos/weak/move2.png" id="4_uflsv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ctqyj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_57ca0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pn2gy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_waspf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uflsv")
+}],
+"loop": true,
+"name": &"weak",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0skf8"]
+size = Vector2(132, 139)
+
+[node name="purple" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ctqyj")
+animation = &"weak"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_0skf8")

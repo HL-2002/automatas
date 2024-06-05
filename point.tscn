@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://1635g58ubyk3"]
+
+[ext_resource type="Script" path="res://point.gd" id="1_i1dv7"]
+[ext_resource type="Texture2D" uid="uid://bgfjcnfk7k70y" path="res://Resources/Resources/items/points.png" id="1_qbw1s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_46sdr"]
+radius = 93.7567
+
+[node name="Point" type="Area2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_i1dv7")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.75, -2.75)
+scale = Vector2(0.2, 0.223)
+texture = ExtResource("1_qbw1s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.75, -2.75)
+scale = Vector2(0.2, 0.223)
+shape = SubResource("CircleShape2D_46sdr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
