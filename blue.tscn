@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bb3ddt3r0w3mb"]
+[gd_scene load_steps=8 format=3 uid="uid://cnuibfej2j0qd"]
 
 [ext_resource type="Script" path="res://RigidBody2D.gd" id="1_vjwf2"]
 [ext_resource type="Texture2D" uid="uid://bia0a1dbqvi78" path="res://Resources/Resources/enemigos/blue/move 1.png" id="2_q0081"]
@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://btm2j3ucimh2n" path="res://Resources/Resources/enemigos/weak/move 1.png" id="4_4vp3c"]
 [ext_resource type="Texture2D" uid="uid://glhdrft77msn" path="res://Resources/Resources/enemigos/weak/move2.png" id="5_x2aos"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_avdny"]
-size = Vector2(97, 107)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ticg"]
+size = Vector2(96, 103)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q7lh1"]
 animations = [{
@@ -35,14 +35,13 @@ animations = [{
 }]
 
 [node name="blue" type="RigidBody2D" groups=["enemy"]]
-position = Vector2(625, 334)
 gravity_scale = 0.0
 script = ExtResource("1_vjwf2")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_avdny")
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_0ticg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1.125, -0.0624962)
