@@ -10,12 +10,13 @@
 position = Vector2(456, 362)
 
 [node name="nivel 1" parent="." instance=ExtResource("1_xp3fm")]
-position = Vector2(800, 400)
+position = Vector2(-456, -359)
 
 [node name="Camera2D" type="Camera2D" parent="nivel 1"]
+position = Vector2(99, 1)
 
 [node name="Player" parent="nivel 1" instance=ExtResource("2_55cug")]
-position = Vector2(-295, 294)
+position = Vector2(-305, 285)
 
 [node name="blue" parent="nivel 1" instance=ExtResource("3_b4mw0")]
 position = Vector2(-298, 386)
@@ -24,40 +25,37 @@ position = Vector2(-298, 386)
 script = ExtResource("4_xxm4a")
 
 [node name="Point" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(1110, 1065)
+position = Vector2(-154, 295)
 
 [node name="Point2" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(1160, 1065)
+position = Vector2(-104, 295)
 
 [node name="Point3" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(1215, 1066)
+position = Vector2(-49, 296)
 
 [node name="Point4" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(950, 1243)
+position = Vector2(-310, 493)
 
 [node name="Point5" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(771, 1266)
+position = Vector2(-406, 496)
 
 [node name="Point6" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(700, 1267)
+position = Vector2(-599, 503)
 
 [node name="Point7" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(554, 1174)
+position = Vector2(-695, 406)
 
 [node name="Point8" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(557, 1088)
-
-[node name="Point9" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(557, 1031)
+position = Vector2(-705, 300)
 
 [node name="Point10" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(556, 978)
+position = Vector2(-693, 197)
 
 [node name="Point11" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(654, 865)
+position = Vector2(-590, 99)
 
 [node name="Point12" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(724, 867)
+position = Vector2(-496, 97)
 
 [node name="Point13" parent="nivel 1/points" instance=ExtResource("4_qf0rp")]
-position = Vector2(786, 865)
+position = Vector2(-404, 97)

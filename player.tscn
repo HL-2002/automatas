@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b78lybqni6jx5"]
+[gd_scene load_steps=10 format=3 uid="uid://b78lybqni6jx5"]
 
 [ext_resource type="Texture2D" uid="uid://dmi2254qf6jka" path="res://Resources/Resources/player/player.png" id="1_5vp3j"]
 [ext_resource type="Script" path="res://player.gd" id="1_ovohx"]
@@ -42,6 +42,20 @@ animations = [{
 radius = 23.0
 height = 84.0
 
+[sub_resource type="GDScript" id="GDScript_l8a6j"]
+script/source = "extends RayCast2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(3, 0)
 script = ExtResource("1_ovohx")
@@ -56,3 +70,6 @@ frame_progress = 0.504025
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_buv62")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+script = SubResource("GDScript_l8a6j")
