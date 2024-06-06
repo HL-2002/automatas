@@ -7,6 +7,7 @@ signal power_up_start
 signal power_up_end
 var SPEED = 200.0
 var Eate_enemys = false
+var counter_powers = 0
 
 
 
@@ -45,10 +46,14 @@ func _on_area_2d_body_entered(body):
 
 func get_power():
 	SPEED = 300
+	counter_powers += 1
 	Eate_enemys = true
 	get_tree().call_group("enemy","enter_weak_mode")
 	power_up_start.emit()
 	await get_tree().create_timer(8).timeout
+	if counter_powers >= 2:
+		counter_powers -= 1		
+		return
 	power_up_end.emit()
 	Eate_enemys = false
 	SPEED = 200
