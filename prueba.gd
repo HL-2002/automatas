@@ -23,7 +23,10 @@ func _on_player_dead():
 
 func _on_player_power_up_start():
 	$Music.stop()
-
+	$songUp.play()
 
 func _on_player_power_up_end():
 	$Music.play()
+	$songUp.stop()
+	
+

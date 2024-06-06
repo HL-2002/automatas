@@ -1,11 +1,14 @@
 extends CanvasLayer
 
 var points_counter = 0
-var lifes_counter = 2
+var lifes_counter = 3
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	set_lifes_messages()
+	set_score()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,7 +40,7 @@ func _on_player_dead():
 		
 		
 func set_lifes_messages():
-	$LifesLabel.text  = str(lifes_counter)
+	$LifesLabel.text  = "Life "  + str(lifes_counter)
 
 func set_score():
 	$ScoreLabel.text = "score " + str(points_counter)
