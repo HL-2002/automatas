@@ -1,12 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://ftl4krr2seh7"]
+[gd_scene load_steps=11 format=3 uid="uid://ftl4krr2seh7"]
 
 [ext_resource type="Texture2D" uid="uid://hkxhe01wcohr" path="res://Resources/Resources/enemigos/orange/move 1.png" id="1_hrnls"]
+[ext_resource type="Script" path="res://orange.gd" id="1_ve7tj"]
+[ext_resource type="Texture2D" uid="uid://dwdhdp5vki3sp" path="res://Resources/Resources/enemigos/eated/eat1.png" id="2_031ri"]
 [ext_resource type="Texture2D" uid="uid://bcyna4eygfdth" path="res://Resources/Resources/enemigos/orange/move2.png" id="2_etqwg"]
+[ext_resource type="Texture2D" uid="uid://cu4mifkvs3irv" path="res://Resources/Resources/enemigos/eated/eat2.png" id="3_rc23x"]
 [ext_resource type="Texture2D" uid="uid://btm2j3ucimh2n" path="res://Resources/Resources/enemigos/weak/move 1.png" id="3_ryvrp"]
 [ext_resource type="Texture2D" uid="uid://glhdrft77msn" path="res://Resources/Resources/enemigos/weak/move2.png" id="4_mpleh"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlkac"]
+size = Vector2(71, 66)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_vbrwi"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_031ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rc23x")
+}],
+"loop": true,
+"name": &"died",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_hrnls")
@@ -30,16 +47,37 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlkac"]
-size = Vector2(135, 138)
+[sub_resource type="LabelSettings" id="LabelSettings_q4x7c"]
+font_size = 30
 
 [node name="Orange" type="RigidBody2D"]
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_vbrwi")
-animation = &"weak"
+z_index = 1
+position = Vector2(4, -8)
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_ve7tj")
+speed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1)
+position = Vector2(-1.5, 5)
 shape = SubResource("RectangleShape2D_mlkac")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_vbrwi")
+animation = &"walk"
+
+[node name="Score" type="Label" parent="."]
+visible = false
+offset_left = -16.0
+offset_top = -79.0
+offset_right = 20.0
+offset_bottom = -49.0
+text = "350"
+label_settings = SubResource("LabelSettings_q4x7c")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+debug_enabled = true
+
+[connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]

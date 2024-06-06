@@ -1,5 +1,5 @@
 extends RigidBody2D
-@export var speed = 250
+@export var speed = 100
 var direction = Vector2.ZERO
 @onready var nav  = $NavigationAgent2D
 var markeds
@@ -15,7 +15,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if to_follow:
-		nav.target_position = to_follow.position
+		if eat_is:
+			nav.target_position = to_follow.position
+		else:
+			nav.target_position = get_tree().get_nodes_in_group("player")[0].position
+			
 		var direction = nav.get_next_path_position() - global_position
 		#var velocity = Vector2.ZERO
 		direction = direction.normalized()

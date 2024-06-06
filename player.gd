@@ -40,9 +40,11 @@ func _on_area_2d_body_entered(body):
 		$AnimatedSprite2D.hide()
 		get_tree().paused = true
 		await get_tree().create_timer(0.5).timeout		
-		body.queue_free()
-		$AnimatedSprite2D.show()
 		get_tree().paused = false
+		body.to_home()
+		$AnimatedSprite2D.show()
+		
+		
 
 func get_power():
 	SPEED = 300
@@ -50,12 +52,12 @@ func get_power():
 	Eate_enemys = true
 	get_tree().call_group("enemy","enter_weak_mode")
 	power_up_start.emit()
-	await get_tree().create_timer(8).timeout
+	await get_tree().create_timer(5).timeout
+	counter_powers -= 1	
 	if counter_powers >= 2:
-		counter_powers -= 1		
 		return
 	power_up_end.emit()
 	Eate_enemys = false
 	SPEED = 200
-	get_tree().call_group("enemy","normal_mode")
+	get_tree().call_group("enemy","change_eat")
 	

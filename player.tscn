@@ -60,7 +60,7 @@ func _process(delta):
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxrd7"]
 size = Vector2(53, 94)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(3, 0)
 script = ExtResource("1_ovohx")
 metadata/_edit_group_ = true
