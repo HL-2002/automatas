@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnuibfej2j0qd"]
+[gd_scene load_steps=9 format=3 uid="uid://cnuibfej2j0qd"]
 
 [ext_resource type="Script" path="res://RigidBody2D.gd" id="1_vjwf2"]
 [ext_resource type="Texture2D" uid="uid://bia0a1dbqvi78" path="res://Resources/Resources/enemigos/blue/move 1.png" id="2_q0081"]
@@ -34,10 +34,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_dewbn"]
+font_size = 30
+
 [node name="blue" type="RigidBody2D" groups=["enemy"]]
 gravity_scale = 0.0
 script = ExtResource("1_vjwf2")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -0.5)
@@ -52,5 +54,14 @@ animation = &"walk"
 [node name="walktimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="Score" type="Label" parent="."]
+visible = false
+offset_left = -16.0
+offset_top = -79.0
+offset_right = 20.0
+offset_bottom = -49.0
+text = "350"
+label_settings = SubResource("LabelSettings_dewbn")
 
 [connection signal="timeout" from="walktimer" to="." method="_on_walktimer_timeout"]

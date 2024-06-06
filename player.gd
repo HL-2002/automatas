@@ -2,7 +2,11 @@ extends CharacterBody2D
 
 class_name Player
 
-const SPEED = 200.0
+signal dead
+signal power_up_start
+signal power_up_end
+var SPEED = 200.0
+var Eate_enemys = false
 
 
 
@@ -22,9 +26,31 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _on_area_2d_body_entered(body):
-	if body.is_in_group("enemy"):
+	if body.is_in_group("enemy") && not Eate_enemys:
+		$diedSound.play()
 		$AnimatedSprite2D.play("die")
 		await get_tree().create_timer(0.6).timeout
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame = 3
+		dead.emit()
+		$AnimatedSprite2D.frame = 0
+	elif body.is_in_group("enemy"):
+		body.get_ete()
+		$AnimatedSprite2D.hide()
+		get_tree().paused = true
+		await get_tree().create_timer(0.5).timeout		
+		body.queue_free()
+		$AnimatedSprite2D.show()
+		get_tree().paused = false
 
+func get_power():
+	SPEED = 300
+	Eate_enemys = true
+	get_tree().call_group("enemy","enter_weak_mode")
+	power_up_start.emit()
+	await get_tree().create_timer(8).timeout
+	power_up_end.emit()
+	Eate_enemys = false
+	SPEED = 200
+	get_tree().call_group("enemy","normal_mode")
+	

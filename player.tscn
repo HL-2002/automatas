@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b78lybqni6jx5"]
+[gd_scene load_steps=12 format=3 uid="uid://b78lybqni6jx5"]
 
 [ext_resource type="Texture2D" uid="uid://dmi2254qf6jka" path="res://Resources/Resources/player/player.png" id="1_5vp3j"]
 [ext_resource type="Script" path="res://player.gd" id="1_ovohx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://r1cxqxnhpqdq" path="res://Resources/Resources/player/player die(2).png" id="3_ybqft"]
 [ext_resource type="Texture2D" uid="uid://dnct0u5efk875" path="res://Resources/Resources/player/player die(3).png" id="4_7hhlb"]
 [ext_resource type="Texture2D" uid="uid://ccmbpai6k01rm" path="res://Resources/Resources/player/player mov.png" id="5_al422"]
+[ext_resource type="AudioStream" uid="uid://kk81jdo8asdd" path="res://Resources/Resources/sfx/die sound.mp3" id="7_mw0vy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rm3d5"]
 animations = [{
@@ -56,6 +57,9 @@ func _process(delta):
 	pass
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxrd7"]
+size = Vector2(53, 94)
+
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(3, 0)
 script = ExtResource("1_ovohx")
@@ -69,7 +73,19 @@ frame = 1
 frame_progress = 0.504025
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_buv62")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 script = SubResource("GDScript_l8a6j")
+
+[node name="diedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mw0vy")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.5, 3)
+shape = SubResource("RectangleShape2D_bxrd7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

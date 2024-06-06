@@ -1,4 +1,7 @@
 extends Node
+class_name  Pointa
+signal new_point()
+
 
 var point_count_total
 var point_count = 0
@@ -19,6 +22,7 @@ func _process(delta):
 func _on_get_point():
 	point_count += 1;
 	print(point_count)
+	new_point.emit()
 #win game
 	if point_count == point_count_total:
 		print("win")
