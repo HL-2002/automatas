@@ -1,8 +1,958 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5asd8tkqe3oq"]
+[gd_scene load_steps=6 format=3 uid="uid://c5asd8tkqe3oq"]
 
 [ext_resource type="PackedScene" uid="uid://qs11b18q6a5q" path="res://nivel_3.tscn" id="1_xg0xn"]
+[ext_resource type="PackedScene" uid="uid://b78lybqni6jx5" path="res://player.tscn" id="2_tlaba"]
+[ext_resource type="PackedScene" uid="uid://cnuibfej2j0qd" path="res://blue.tscn" id="3_alv4a"]
+[ext_resource type="PackedScene" uid="uid://1635g58ubyk3" path="res://point.tscn" id="4_uxxmu"]
+[ext_resource type="PackedScene" uid="uid://b6fnssevag6jn" path="res://monster.tscn" id="5_q7syr"]
 
 [node name="code_level_3" type="Node2D"]
 
 [node name="nivel 3" parent="." instance=ExtResource("1_xg0xn")]
 position = Vector2(-98, -300)
+
+[node name="Player" parent="nivel 3" instance=ExtResource("2_tlaba")]
+position = Vector2(100, 110)
+
+[node name="blue" parent="nivel 3" instance=ExtResource("3_alv4a")]
+position = Vector2(-195, -707)
+
+[node name="points" type="Node" parent="nivel 3"]
+
+[node name="Point131" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(105, 200)
+
+[node name="Point132" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(305, 200)
+
+[node name="Point133" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(205, 200)
+
+[node name="Point134" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, 200)
+
+[node name="Point135" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(505, 200)
+
+[node name="Point136" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, 200)
+
+[node name="Point137" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, 200)
+
+[node name="Point138" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(705, 200)
+
+[node name="Point139" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1105, 200)
+
+[node name="Point140" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1005, 200)
+
+[node name="Point141" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(905, 200)
+
+[node name="Point142" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1305, 200)
+
+[node name="Point143" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, 200)
+
+[node name="Point144" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, 200)
+
+[node name="Point145" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, 200)
+
+[node name="Point146" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1505, 200)
+
+[node name="Point184" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1395, 200)
+
+[node name="Point185" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1495, 200)
+
+[node name="Point186" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, 200)
+
+[node name="Point187" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, 200)
+
+[node name="Point188" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1295, 200)
+
+[node name="Point189" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-895, 200)
+
+[node name="Point190" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-995, 200)
+
+[node name="Point191" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1095, 200)
+
+[node name="Point192" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-695, 200)
+
+[node name="Point193" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, 200)
+
+[node name="Point194" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, 200)
+
+[node name="Point195" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, 200)
+
+[node name="Point196" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, 200)
+
+[node name="Point197" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-195, 200)
+
+[node name="Point198" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-295, 200)
+
+[node name="Point199" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-90, 200)
+
+[node name="Point221" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(5, -100)
+
+[node name="Point222" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(5, 2.08165e-12)
+
+[node name="Point223" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(5, 100)
+
+[node name="Point224" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(5, 200)
+
+[node name="Point200" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, 600)
+
+[node name="Point201" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1895, 600)
+
+[node name="Point203" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, 600)
+
+[node name="Point204" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1695, 600)
+
+[node name="Point205" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1295, 600)
+
+[node name="Point206" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1395, 600)
+
+[node name="Point207" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1495, 600)
+
+[node name="Point208" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1095, 600)
+
+[node name="Point209" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, 600)
+
+[node name="Point210" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, 600)
+
+[node name="Point211" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-895, 600)
+
+[node name="Point212" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-995, 600)
+
+[node name="Point213" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, 600)
+
+[node name="Point214" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-695, 600)
+
+[node name="Point215" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, 600)
+
+[node name="Point216" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-295, 600)
+
+[node name="Point217" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, 600)
+
+[node name="Point218" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-195, 600)
+
+[node name="Point219" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, 200)
+
+[node name="Point220" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1895, 200)
+
+[node name="Point225" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, 200)
+
+[node name="Point226" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1695, 200)
+
+[node name="Point247" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1395, -800)
+
+[node name="Point248" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1495, -800)
+
+[node name="Point249" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -800)
+
+[node name="Point250" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -800)
+
+[node name="Point251" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1295, -800)
+
+[node name="Point252" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-895, -800)
+
+[node name="Point253" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-995, -800)
+
+[node name="Point254" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1095, -800)
+
+[node name="Point255" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-695, -800)
+
+[node name="Point256" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, -800)
+
+[node name="Point257" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -800)
+
+[node name="Point258" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, -800)
+
+[node name="Point259" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -800)
+
+[node name="Point260" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-195, -800)
+
+[node name="Point261" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-295, -800)
+
+[node name="Point262" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-95, -800)
+
+[node name="Point263" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(5, -800)
+
+[node name="Point264" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, -800)
+
+[node name="Point265" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1895, -800)
+
+[node name="Point266" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -800)
+
+[node name="Point267" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1695, -800)
+
+[node name="Point268" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1395, -800)
+
+[node name="Point269" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1495, -800)
+
+[node name="Point270" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -800)
+
+[node name="Point271" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -800)
+
+[node name="Point272" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1295, -800)
+
+[node name="Point273" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-895, -800)
+
+[node name="Point274" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-995, -800)
+
+[node name="Point275" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1095, -800)
+
+[node name="Point276" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-695, -800)
+
+[node name="Point277" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, -800)
+
+[node name="Point278" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -800)
+
+[node name="Point279" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, -800)
+
+[node name="Point280" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -800)
+
+[node name="Point281" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-195, -800)
+
+[node name="Point282" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-295, -800)
+
+[node name="Point283" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-95, -800)
+
+[node name="Point284" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, -800)
+
+[node name="Point285" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1895, -800)
+
+[node name="Point286" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -800)
+
+[node name="Point287" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1695, -800)
+
+[node name="Point288" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1395, -1200)
+
+[node name="Point289" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1495, -1200)
+
+[node name="Point290" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -1200)
+
+[node name="Point291" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -1200)
+
+[node name="Point292" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1295, -1200)
+
+[node name="Point293" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-895, -1200)
+
+[node name="Point294" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-995, -1200)
+
+[node name="Point295" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1095, -1200)
+
+[node name="Point296" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, -1200)
+
+[node name="Point297" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, -1200)
+
+[node name="Point298" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1895, -1200)
+
+[node name="Point300" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1695, -1200)
+
+[node name="Point147" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(105, -1200)
+
+[node name="Point148" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(305, -1200)
+
+[node name="Point149" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(205, -1200)
+
+[node name="Point150" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, -1200)
+
+[node name="Point151" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(505, -1200)
+
+[node name="Point152" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -1200)
+
+[node name="Point314" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -1200)
+
+[node name="Point315" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, -1200)
+
+[node name="Point316" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -1200)
+
+[node name="Point317" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-195, -1200)
+
+[node name="Point318" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-295, -1200)
+
+[node name="Point319" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-95, -1200)
+
+[node name="Point321" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -1200)
+
+[node name="Point322" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, -1200)
+
+[node name="Point323" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -1200)
+
+[node name="Point324" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-195, -1200)
+
+[node name="Point325" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-295, -1200)
+
+[node name="Point326" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-95, -1200)
+
+[node name="Point153" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1705, 200)
+
+[node name="Point154" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, 200)
+
+[node name="Point155" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1995, 200)
+
+[node name="Point156" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1905, 200)
+
+[node name="Point157" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, -1200)
+
+[node name="Point158" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1105, -1200)
+
+[node name="Point159" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1005, -1200)
+
+[node name="Point160" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(905, -1200)
+
+[node name="Point161" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1305, -1200)
+
+[node name="Point162" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -1200)
+
+[node name="Point163" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, -1200)
+
+[node name="Point164" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, -1200)
+
+[node name="Point165" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1505, -1200)
+
+[node name="Point166" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1705, -1200)
+
+[node name="Point167" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, -1200)
+
+[node name="Point169" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1905, -1200)
+
+[node name="Point170" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, -800)
+
+[node name="Point171" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(505, -800)
+
+[node name="Point172" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -800)
+
+[node name="Point173" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, -800)
+
+[node name="Point174" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(705, -800)
+
+[node name="Point175" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1105, -800)
+
+[node name="Point176" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1005, -800)
+
+[node name="Point177" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(905, -800)
+
+[node name="Point178" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1305, -800)
+
+[node name="Point179" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -800)
+
+[node name="Point180" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, -800)
+
+[node name="Point181" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, -800)
+
+[node name="Point182" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1505, -800)
+
+[node name="Point183" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1705, -800)
+
+[node name="Point327" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, -800)
+
+[node name="Point328" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1995, -800)
+
+[node name="Point329" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1905, -800)
+
+[node name="Point330" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, 600)
+
+[node name="Point331" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(305, 600)
+
+[node name="Point332" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(205, 600)
+
+[node name="Point333" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, 600)
+
+[node name="Point334" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(505, 600)
+
+[node name="Point335" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(905, 600)
+
+[node name="Point336" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, 600)
+
+[node name="Point337" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(705, 600)
+
+[node name="Point338" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1105, 600)
+
+[node name="Point339" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1005, 600)
+
+[node name="Point340" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, 600)
+
+[node name="Point341" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1305, 600)
+
+[node name="Point342" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, 600)
+
+[node name="Point343" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, 600)
+
+[node name="Point344" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1505, 600)
+
+[node name="Point345" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1705, 600)
+
+[node name="Point346" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1905, 600)
+
+[node name="Point347" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, 600)
+
+[node name="Point349" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -1100)
+
+[node name="Point350" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -1000)
+
+[node name="Point351" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -900)
+
+[node name="Point352" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, -1100)
+
+[node name="Point353" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, -1000)
+
+[node name="Point354" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, -900)
+
+[node name="Point355" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, -1100)
+
+[node name="Point356" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, -1000)
+
+[node name="Point357" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, -900)
+
+[node name="Point358" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, -1100)
+
+[node name="Point359" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, -1000)
+
+[node name="Point360" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, -900)
+
+[node name="Point361" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, 300)
+
+[node name="Point362" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, 400)
+
+[node name="Point363" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, 500)
+
+[node name="Point364" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, 300)
+
+[node name="Point365" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, 400)
+
+[node name="Point366" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, 500)
+
+[node name="Point367" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, 300)
+
+[node name="Point368" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, 400)
+
+[node name="Point369" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1795, 500)
+
+[node name="Point370" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, 300)
+
+[node name="Point371" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, 400)
+
+[node name="Point372" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, 500)
+
+[node name="Point373" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -700)
+
+[node name="Point374" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -600)
+
+[node name="Point375" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -500)
+
+[node name="Point376" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -100)
+
+[node name="Point377" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, 2.08165e-12)
+
+[node name="Point378" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, 100)
+
+[node name="Point379" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -400)
+
+[node name="Point380" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -300)
+
+[node name="Point381" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1995, -200)
+
+[node name="Point382" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, 2.08165e-12)
+
+[node name="Point383" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, 100)
+
+[node name="Point384" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -700)
+
+[node name="Point385" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -600)
+
+[node name="Point386" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1595, -500)
+
+[node name="Point388" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -700)
+
+[node name="Point389" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -600)
+
+[node name="Point390" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -500)
+
+[node name="Point391" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -100)
+
+[node name="Point392" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, 2.08165e-12)
+
+[node name="Point393" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, 100)
+
+[node name="Point394" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -400)
+
+[node name="Point395" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -300)
+
+[node name="Point396" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-1195, -200)
+
+[node name="Point397" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -700)
+
+[node name="Point398" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -600)
+
+[node name="Point399" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -500)
+
+[node name="Point400" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -100)
+
+[node name="Point401" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, 2.08165e-12)
+
+[node name="Point402" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, 100)
+
+[node name="Point403" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -400)
+
+[node name="Point404" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -300)
+
+[node name="Point405" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-395, -200)
+
+[node name="Point406" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(105, -600)
+
+[node name="Point407" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(305, -600)
+
+[node name="Point408" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(205, -600)
+
+[node name="Point409" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, -600)
+
+[node name="Point410" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(505, -600)
+
+[node name="Point411" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -600)
+
+[node name="Point412" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, -600)
+
+[node name="Point413" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(705, -600)
+
+[node name="Point414" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1005, -600)
+
+[node name="Point415" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(905, -600)
+
+[node name="Point416" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(5, -600)
+
+[node name="Point417" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -500)
+
+[node name="Point418" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -700)
+
+[node name="Point419" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(5, -700)
+
+[node name="Point420" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -1100)
+
+[node name="Point421" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -1000)
+
+[node name="Point422" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -900)
+
+[node name="Point423" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, -1100)
+
+[node name="Point424" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, -1000)
+
+[node name="Point425" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(605, -900)
+
+[node name="Point426" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -100)
+
+[node name="Point427" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, 2.08165e-12)
+
+[node name="Point428" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, 100)
+
+[node name="Point429" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -400)
+
+[node name="Point430" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -300)
+
+[node name="Point431" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(405, -200)
+
+[node name="Point432" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1005, -500)
+
+[node name="Point433" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1005, -400)
+
+[node name="Point434" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1105, -400)
+
+[node name="Point435" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1305, -400)
+
+[node name="Point436" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -400)
+
+[node name="Point437" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, -400)
+
+[node name="Point438" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -700)
+
+[node name="Point439" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -600)
+
+[node name="Point440" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -500)
+
+[node name="Point441" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1605, -700)
+
+[node name="Point443" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1995, -700)
+
+[node name="Point444" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1995, -600)
+
+[node name="Point445" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1995, -500)
+
+[node name="Point446" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1995, -400)
+
+[node name="Point447" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, -400)
+
+[node name="Point448" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1905, -400)
+
+[node name="Point449" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, -100)
+
+[node name="Point450" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, 2.08165e-12)
+
+[node name="Point451" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, 100)
+
+[node name="Point452" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, -300)
+
+[node name="Point453" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1805, -200)
+
+[node name="Point454" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -100)
+
+[node name="Point455" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, 2.08165e-12)
+
+[node name="Point456" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, 100)
+
+[node name="Point457" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -300)
+
+[node name="Point458" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1205, -200)
+
+[node name="Point459" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1305, 2.08165e-12)
+
+[node name="Point461" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1305, -200)
+
+[node name="Point460" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, -100)
+
+[node name="Point462" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, 2.08165e-12)
+
+[node name="Point463" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, 100)
+
+[node name="Point464" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, -300)
+
+[node name="Point465" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(1405, -200)
+
+[node name="Point466" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, 2.08165e-12)
+
+[node name="Point467" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(805, 100)
+
+[node name="Point442" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -400)
+
+[node name="Point468" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -300)
+
+[node name="Point469" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-595, -200)
+
+[node name="Point470" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, -400)
+
+[node name="Point471" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-495, -200)
+
+[node name="Point472" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-795, -200)
+
+[node name="Point473" parent="nivel 3/points" instance=ExtResource("4_uxxmu")]
+position = Vector2(-695, -200)
+
+[node name="Super" type="Node" parent="nivel 3"]
+
+[node name="Monster7" parent="nivel 3/Super" instance=ExtResource("5_q7syr")]
+position = Vector2(-1599, -416)
+
+[node name="Monster8" parent="nivel 3/Super" instance=ExtResource("5_q7syr")]
+position = Vector2(-1981, 600)
+
+[node name="Monster9" parent="nivel 3/Super" instance=ExtResource("5_q7syr")]
+position = Vector2(-1986, -1198)
+
+[node name="Monster10" parent="nivel 3/Super" instance=ExtResource("5_q7syr")]
+position = Vector2(1, -1191)
+
+[node name="Monster11" parent="nivel 3/Super" instance=ExtResource("5_q7syr")]
+position = Vector2(1990, -1200)
+
+[node name="Monster12" parent="nivel 3/Super" instance=ExtResource("5_q7syr")]
+position = Vector2(1602, -611)
+
+[node name="Monster13" parent="nivel 3/Super" instance=ExtResource("5_q7syr")]
+position = Vector2(1992, 602)
+
+[node name="Camera2D" type="Camera2D" parent="nivel 3"]
+position = Vector2(98, 6)
