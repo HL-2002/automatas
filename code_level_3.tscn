@@ -5,3 +5,4 @@
 [node name="code_level_3" type="Node2D"]
 
 [node name="nivel 3" parent="." instance=ExtResource("1_xg0xn")]
+position = Vector2(-98, -300)

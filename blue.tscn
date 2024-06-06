@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://glhdrft77msn" path="res://Resources/Resources/enemigos/weak/move2.png" id="5_x2aos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ticg"]
-size = Vector2(96, 103)
+size = Vector2(72, 74)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q7lh1"]
 animations = [{
@@ -42,12 +42,11 @@ gravity_scale = 0.0
 script = ExtResource("1_vjwf2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_0ticg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.125, -0.0624962)
-scale = Vector2(0.735, 0.749101)
+position = Vector2(0, 0.612503)
+scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_q7lh1")
 animation = &"walk"
 
