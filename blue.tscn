@@ -82,7 +82,6 @@ label_settings = SubResource("LabelSettings_dewbn")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_postprocessing = 1
-debug_enabled = true
 
 [connection signal="timeout" from="walktimer" to="." method="_on_walktimer_timeout"]
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]

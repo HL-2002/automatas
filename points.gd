@@ -24,10 +24,10 @@ func _on_get_point():
 	print(point_count)
 	new_point.emit()
 #win game
-	if point_count == point_count_total:
+	if point_count  == point_count_total:
 		if get_tree().current_scene.name == "LevelCode":
 			get_tree().change_scene_to_file("res://code_level_2.tscn")
-		elif get_tree().current_scene.name == "code_level_2":
+		elif get_tree().current_scene.name == "codeLevel2":
 			get_tree().change_scene_to_file("res://code_level_3.tscn")
 		elif get_tree().current_scene.name == "code_level_3":
 			get_tree().change_scene_to_file("res://code_level_4.tscn")

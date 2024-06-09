@@ -30,7 +30,9 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("enemy") && not Eate_enemys:
 		$diedSound.play()
 		$AnimatedSprite2D.play("die")
+		$Area2D/CollisionShape2D.disabled = true
 		await get_tree().create_timer(0.6).timeout
+		$Area2D/CollisionShape2D.disabled = false
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame = 3
 		dead.emit()

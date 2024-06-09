@@ -1,12 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://cagme2v13yr4"]
+[gd_scene load_steps=11 format=3 uid="uid://cagme2v13yr4"]
 
+[ext_resource type="Texture2D" uid="uid://dwdhdp5vki3sp" path="res://Resources/Resources/enemigos/eated/eat1.png" id="1_a8a4a"]
+[ext_resource type="Script" path="res://red.gd" id="1_h51dv"]
 [ext_resource type="Texture2D" uid="uid://b0vimuqcs2s3i" path="res://Resources/Resources/enemigos/red/move 1.png" id="1_oybfq"]
 [ext_resource type="Texture2D" uid="uid://cjnm6tq0fvu8f" path="res://Resources/Resources/enemigos/red/move2.png" id="2_1xsxt"]
+[ext_resource type="Texture2D" uid="uid://cu4mifkvs3irv" path="res://Resources/Resources/enemigos/eated/eat2.png" id="2_y4o4o"]
 [ext_resource type="Texture2D" uid="uid://btm2j3ucimh2n" path="res://Resources/Resources/enemigos/weak/move 1.png" id="3_xfw4u"]
 [ext_resource type="Texture2D" uid="uid://glhdrft77msn" path="res://Resources/Resources/enemigos/weak/move2.png" id="4_5iny4"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_kfmjr"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7t8a5"]
+size = Vector2(72, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6y0o"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a8a4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y4o4o")
+}],
+"loop": true,
+"name": &"died",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_oybfq")
@@ -30,15 +47,37 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_frm0a"]
-size = Vector2(133, 141)
+[sub_resource type="LabelSettings" id="LabelSettings_nrimh"]
+font_size = 30
 
 [node name="red" type="RigidBody2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_kfmjr")
-animation = &"weak"
+gravity_scale = 0.0
+script = ExtResource("1_h51dv")
+speed = 250
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_frm0a")
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_7t8a5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0.612503)
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_d6y0o")
+animation = &"walk"
+
+[node name="walktimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Score" type="Label" parent="."]
+visible = false
+offset_left = -16.0
+offset_top = -79.0
+offset_right = 20.0
+offset_bottom = -49.0
+text = "350"
+label_settings = SubResource("LabelSettings_nrimh")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+debug_enabled = true

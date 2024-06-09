@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5asd8tkqe3oq"]
+[gd_scene load_steps=10 format=3 uid="uid://c5asd8tkqe3oq"]
 
 [ext_resource type="PackedScene" uid="uid://qs11b18q6a5q" path="res://nivel_3.tscn" id="1_xg0xn"]
 [ext_resource type="PackedScene" uid="uid://b78lybqni6jx5" path="res://player.tscn" id="2_tlaba"]
 [ext_resource type="PackedScene" uid="uid://cnuibfej2j0qd" path="res://blue.tscn" id="3_alv4a"]
 [ext_resource type="PackedScene" uid="uid://1635g58ubyk3" path="res://point.tscn" id="4_uxxmu"]
 [ext_resource type="PackedScene" uid="uid://b6fnssevag6jn" path="res://monster.tscn" id="5_q7syr"]
+[ext_resource type="PackedScene" uid="uid://cagme2v13yr4" path="res://red.tscn" id="6_7a7l6"]
+[ext_resource type="PackedScene" uid="uid://ftl4krr2seh7" path="res://orange.tscn" id="7_3k1ch"]
+[ext_resource type="PackedScene" uid="uid://p3pf6gllgnyp" path="res://purple.tscn" id="8_ncl5j"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_iybai"]
 vertices = PackedVector2Array(1657, -146, 1655, -146, 1655, -193, 1575, -145, 1543, -145, 1259, -147, 1342, -153, 1945, 851, 2135, 861, 1865, 858, 1465, 143, 1464, 64, 1542, 453, -258, -455, -258, 454, -335, -60, -344, -153, -344, -454, -343, 451, -337, 53, -261, 543, -342, 542, 1464, 264, 1467, 342, 1458, -54, 1457, 461, 2051, -443, 2133, -537, 2137, -64, 2042, -145, 1947, -61, 1865, -149, 1862, 460, 1941, 453, 1862, 543, 1342, -62, 1739, -542, 1746, -458, 1655, -858, 1641, -852, 1640, -858, -344, 142, 943, -555, 947, -557, 950, -546, 1344, 342, 1343, 465, 1256, 453, 1256, -50, 1341, 259, 740, -935, 742, -543, 657, -551, 653, -852, -538, -935, 144, -862, 1748, -260, 1655, -268, 1655, -453, 1658, -545, 154, -739, 527, -739, 534, -661, -328, -661, -331, -736, 55, -748, 53, -857, -458, -864, -536, -543, -452, -543, -1059, -456, -739, -541, -656, -542, 136, -532, 1344, 135, 1340, 51, 1950, 541, -1139, -450, -1061, 453, -1148, 452, -455, 52, -740, 142, -545, 56, 1256, -453, 1347, -459, 2123, 461, 2129, 535, -256, 857, -339, 855, 1061, -74, 1146, -151, 1059, -258, 1133, -336, 541, -342, 541, -254, 544, -458, 863, -542, -69, 937, -1930, 940, -1928, 863, -1742, 861, -1660, 861, 1743, -859, -1539, 279, -1468, 271, -1450, 456, -1539, 458, -664, -938, -742, -857, -1929, -936, -1459, -858, -1929, -858, -1537, -857, -1460, -545, -1546, -534, 2134, 933, 274, 939, 274, 868, 458, 857, 542, 854, 460, 544, 541, 545, -1460, -67, -1544, -67, -1543, -456, -1458, -454, 862, -934, 2132, -934, 2132, -864, 943, -859, 458, -538, 448, -343, 57, 461, 57, 76, 137, 76, 153, 450, 538, 261, -70, 861, -738, 61, -545, -140, -452, -57, 865, 274, 935, 274, 948, 456, 851, 457, -1741, 541, -1654, 543, 460, 460, 543, 455, 456, -248, -1860, 452, -1938, 541, -1940, -534, -1857, -457, 56, -449, 148, -344, 58, -257)
@@ -965,3 +968,12 @@ position = Vector2(98, 6)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="nivel 3"]
 navigation_polygon = SubResource("NavigationPolygon_iybai")
+
+[node name="red" parent="nivel 3" instance=ExtResource("6_7a7l6")]
+position = Vector2(-86, -704)
+
+[node name="Orange" parent="nivel 3/red" instance=ExtResource("7_3k1ch")]
+position = Vector2(133, 3)
+
+[node name="purple" parent="nivel 3/red/Orange" instance=ExtResource("8_ncl5j")]
+position = Vector2(129, 0)

@@ -27,7 +27,7 @@ func _on_player_dead():
 	lifes_counter -= 1
 	set_lifes_messages()
 	if lifes_counter == 0:
-		$"../nivel 1/Player".hide()
+		get_tree().get_nodes_in_group("player")[0].hide()
 		$game_over.show()
 		await get_tree().create_timer(1).timeout
 		lifes_counter = 2

@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"nivel 2/Player".position = $"nivel 2/Marker2D".position
+	get_tree().get_nodes_in_group("player")[0].position = $"nivel 2/Marker2D2".position
 	$Music.play()
 	
 	
@@ -15,7 +15,7 @@ func _process(delta):
 
 
 func _on_player_dead():
-	$"nivel 2/Player".position = $"nivel 2/Marker2D".position
+	get_tree().get_nodes_in_group("player")[0].position =  $"nivel 2/Marker2D2".position
 
 
 	
